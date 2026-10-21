@@ -147,6 +147,21 @@ def test_validator_refetches_complete_source(direct_deploy, direct_vm, direct_ac
     assert direct_vm.run_validator() is False
 
 
+@pytest.mark.parametrize('key,mask,value', [('faults', 3, 1), ('outages', 3, 1), ('faults', 8, 0), ('outages', 8, 0)])
+def test_validator_rejects_changed_positive_and_negative_decisions(direct_deploy, direct_vm, direct_accounts, key, mask, value):
+    c = deploy(direct_deploy, direct_vm, direct_accounts); activate(c, direct_vm)
+    answer = model(); answer[key][mask] = value; mocks(direct_vm, answer=answer)
+    assert direct_vm.run_validator() is False
+
+
+def test_execution_is_permissionless_only_after_real_member_approval(direct_deploy, direct_vm, direct_accounts):
+    c = deploy(direct_deploy, direct_vm, direct_accounts, 'core'); activate(c, direct_vm, 'core'); c.propose('approved')
+    for i in [1, 2]:
+        direct_vm.sender = direct_accounts[i]; c.endorse(0)
+    direct_vm.sender = direct_accounts[4]; c.execute(0)
+    assert c.get_state()['value'] == 'approved' and c.get_state()['history'][0]['endorsements'] == 6
+
+
 @pytest.mark.parametrize('change', ['short', 'null', 'bool', 'float', 'unknown-string', 'extra', 'empty-anchor', 'bad-anchor', 'duplicate-anchor', 'not-downward'])
 def test_invalid_model_cannot_activate(direct_deploy, direct_vm, direct_accounts, change):
     c = deploy(direct_deploy, direct_vm, direct_accounts); answer = model()

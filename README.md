@@ -64,6 +64,11 @@ python -m pytest tests/direct -q
 node --test tests/rpc-preflight.test.cjs
 ```
 
+The suite includes 64 direct tests, 361 exhaustive pairs of three-signer failure
+families checked against all quorum families, 96 generated four-signer models,
+and 27 full comparisons with the independent optimizer. Seven transport tests
+verify bounded read retries and refusal to replay signed sends.
+
 Manual GitHub `proofs.yml` runs create four encrypted disposable CLI wallets on
 an ephemeral runner and deploy through `genlayer@0.39.2` to gasless **StudioNet,
 chain 61999**. No key export, funding, native token or real asset is involved.
