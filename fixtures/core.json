@@ -1,0 +1,9 @@
+{
+  "register": "release-register",
+  "signers": ["Aspen", "Birch", "Cedar", "Dogwood"],
+  "clauses": [
+    "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+    "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+    "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+  ]
+}

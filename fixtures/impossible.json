@@ -1,0 +1,9 @@
+{
+  "register": "release-register",
+  "signers": ["Aspen", "Birch", "Cedar", "Dogwood"],
+  "clauses": [
+    "FINAL malicious-signing assumption for release-register: any simultaneous set of at most two of Aspen, Birch, Cedar and Dogwood may be Byzantine, including any pair, any singleton or none. Three or four Byzantine signers simultaneously are excluded.",
+    "FINAL unavailability assumption for release-register: any single signer, or nobody, may be unavailable. Every pair or larger unavailable set is ruled out.",
+    "No named signer is exempt from these final bounds. A narrower pilot that trusted Birch and Cedar has ended and must not be used."
+  ]
+}

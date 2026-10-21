@@ -1,0 +1,9 @@
+{
+  "register": "release-register",
+  "signers": ["Aspen", "Birch", "Cedar", "Dogwood"],
+  "clauses": [
+    "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+    "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+    "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+  ]
+}
