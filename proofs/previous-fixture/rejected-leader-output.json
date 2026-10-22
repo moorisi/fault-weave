@@ -1,0 +1,113 @@
+{
+  "transaction": "0x548fd9d5a92acfbb92698af1f448f54d18ddbc3c9826e18e1964143d5cffde19",
+  "network_result": "MAJORITY_DISAGREE",
+  "votes": {
+    "0x1242E9f5bf9b253327f130E8802b7b2F438A21Ef": "disagree",
+    "0x1dEcE6A694520b1d3a2e24b9f28500858C756BDb": "idle",
+    "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "disagree",
+    "0xa21bc502E3578E4b3039be8c59a257198f7c3f19": "disagree",
+    "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21": "agree"
+  },
+  "leader_output": {
+    "model": {
+      "anchors": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "faults": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "outages": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "source": {
+      "clauses": [
+        "FINAL malicious-signing assumption for release-register: any simultaneous set of at most two of Aspen, Birch, Cedar and Dogwood may be Byzantine, including any pair, any singleton or none. Three or four Byzantine signers simultaneously are excluded.",
+        "FINAL unavailability assumption for release-register: any single signer, or nobody, may be unavailable. Every pair or larger unavailable set is ruled out.",
+        "No named signer is exempt from these final bounds. A narrower pilot that trusted Birch and Cedar has ended and must not be used."
+      ],
+      "register": "release-register",
+      "signers": [
+        "Aspen",
+        "Birch",
+        "Cedar",
+        "Dogwood"
+      ]
+    }
+  },
+  "expected": {
+    "faults": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "outages": [
+      1,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "leader_vectors_match_expected": true,
+  "validator_model_outputs_exposed": false
+}

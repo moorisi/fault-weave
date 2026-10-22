@@ -1,0 +1,17 @@
+{
+  "source_sha256": "a1c1c5661210dba1dec244986702d82018201bd11c9a6c12252ec1fb877807f9",
+  "hashes": {
+    "uniform-deployment": "0x7b88748e9aa2408ec45152ec7a08d639fcb2a74d885cd88a6cf6e7d0cf35607b",
+    "uniform-compile": "0x9923acea2b4946b38e59f5aceeeb521abd5e801824e74721cdf7dc2fe4ec5c47",
+    "uniform-propose-first": "0x27bd72aff24ce8561caf7c7a7f713b6530c46d158f5d452d9368880d44c57c05",
+    "uniform-propose-competing": "0x2a55e5f9e4b1a80918fd660bd8a5855877b49dcdb13f327074f89adacc7084fc",
+    "uniform-endorse-aspen": "0xf0eb6fdad82c9ed6b77e231cb5e15b127448d11286527a4949fa92908303d592",
+    "uniform-endorse-birch": "0x9c8331452f0ca1306b323ab834dcd0c18905008d3240ea91cf941b20bc7e1b82",
+    "uniform-reject-two-signers": "0x67c7b341a545f70653f0e3ef9f139c6510e866e998c06e7af42d61c7ae439a83",
+    "uniform-revoke-birch": "0x0873d9e37eafd957fe325e881c6e243b66419df5fc14d7ebc384ad3ba94a4e8a",
+    "uniform-endorse-cedar": "0x8d419d1d0d2616b5d4269437fdd3429813800c4a532c7a9128fdcbbc3e3e79c3",
+    "uniform-endorse-dogwood": "0xd74223cf3304a7ef633f03c76fd0f7a7a9defb8d69b8b4a2ee5624c3b5687117",
+    "uniform-execute-without-birch": "0x8f13fba393668ccb68fbc04e5f9eee9b242cb8e8d5ae9388272e6ee09589927f",
+    "uniform-reject-stale-competitor": "0x831fb44205517bbd10854f350a1ef4fb8b2a3a40d4d3ec2891503060911e7694"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "assessment": {
+    "model": {
+      "anchors": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "faults": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outages": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "source": {
+      "clauses": [
+        "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+        "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+        "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+      ],
+      "register": "release-register",
+      "signers": [
+        "Aspen",
+        "Birch",
+        "Cedar",
+        "Dogwood"
+      ]
+    }
+  },
+  "configuration": {
+    "labels": [
+      "Aspen",
+      "Birch",
+      "Cedar",
+      "Dogwood"
+    ],
+    "register": "release-register",
+    "repository": "moorisi/fault-weave",
+    "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+    "signers": [
+      "0x6a1004bbf4a8c3c87bcd199064d0f572933d963d",
+      "0xa0ab0f747ce49a44d5ca17736aed73001f12bbc0",
+      "0x8f05f5415eb39784a6d511701de87950dca86ee6",
+      "0x14094e34a402390b9de3236147f5b97205d0f501"
+    ],
+    "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/uniform.json"
+  },
+  "history": [
+    {
+      "endorsements": 13,
+      "nonce": 0,
+      "proposal_id": 0,
+      "value": "release-a"
+    }
+  ],
+  "nonce": 1,
+  "policy": {
+    "quorums": [
+      7,
+      11,
+      13,
+      14
+    ],
+    "status": "ACTIVE",
+    "threshold": 3,
+    "weights": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "witness": []
+  },
+  "proposals": [
+    {
+      "endorsements": 13,
+      "nonce": 0,
+      "proposer": 0,
+      "value": "release-a"
+    },
+    {
+      "endorsements": 0,
+      "nonce": 0,
+      "proposer": 1,
+      "value": "release-b"
+    }
+  ],
+  "value": "release-a"
+}

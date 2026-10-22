@@ -1,4 +1,5 @@
 name: StudioNet failure-aware quorum proofs
+run-name: FaultWeave — ${{ inputs.scenario || 'all' }}
 on:
   workflow_dispatch:
     inputs:

@@ -1,0 +1,17 @@
+{
+  "source_sha256": "a1c1c5661210dba1dec244986702d82018201bd11c9a6c12252ec1fb877807f9",
+  "hashes": {
+    "core-deployment": "0x1a454cb683786839a56a052eb3072cdc11cea4604c187baf0157df061f147a76",
+    "core-compile": "0x4b7412fef21dd4b4e02d69385d9a2c1bf1e57b0f2c26d23ce1115039f4d7b031",
+    "core-propose-first": "0x1dce20ac736a072053fc7cb78ce32584ff5530235edb7dc6ce9f5d684b251367",
+    "core-zero-weight-aspen": "0xe6e0088516255bb0ad72c7836fa53bfac9c8ea429acaecd9d258d75af983a8ac",
+    "core-endorse-birch": "0x0728aecdb378f25319e870ab250ea39c0ac5a43522c5a0683fec077cf8348c45",
+    "core-reject-one-trusted": "0xdf88b80401ec311308283da1d24695598b37eb99c56e6e421b2dff4e54146eac",
+    "core-endorse-cedar": "0xe6dd7a41ceccf42230933eceba99a27cda2c6429ccfaa5caba7eed939132f9a9",
+    "core-execute-first": "0x8d5ed5b8d813bcc90fbe67e4ea5665cb6aeed835b9b5e19445b5d6aa58e83c86",
+    "core-propose-next": "0x406ec00f61281ec9b0540d7445d4e4f8e243374024b6aea44aaf6f7d2e4911a7",
+    "core-next-birch": "0x142d5bbdb3a77d8c01d82279e852cbd395566cd91e4e0551290deeb659ea3af2",
+    "core-next-dogwood": "0xc1cd1f69bef0804aad9662d8ee7f0e28d659dd686e561d8461fb6970ece7a09e",
+    "core-execute-next": "0xb01c38f84bd16e5ec415214677aaade090937fc7f841a29a7369b44b6bf1012b"
+  }
+}

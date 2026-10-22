@@ -10,7 +10,7 @@ function configuration(a){return {repository:a[0],register:a[1],labels:a[2],sign
 const empty={status:'UNCOMPILED',weights:[],threshold:0,quorums:[],witness:[]};
 function initial(id,revision,accounts){return {configuration:configuration(args(id,revision,accounts)),assessment:null,policy:clone(empty),nonce:0,value:'',proposals:[],history:[]};}
 const members=m=>[0,1,2,3].filter(i=>m&(1<<i));
-function model(id){return {faults:Array.from({length:16},(_,m)=>id==='core'?Number((m&~1)===0):Number(members(m).length<=(id==='impossible'?2:1))),outages:Array.from({length:16},(_,m)=>Number(members(m).length<=1))};}
+function model(id){return {faults:Array.from({length:16},(_,m)=>id==='core'?Number((m&~1)===0):Number(members(m).length<=1)),outages:Array.from({length:16},(_,m)=>Number(members(m).length<=(id==='impossible'?2:1)))};}
 function oracle(faults,outages){
  // Independent truth-table oracle: checks ALL winning coalitions, rather than
  // only their minimal antichain as the contract does.

@@ -14,7 +14,7 @@ REPO = 'moorisi/fault-weave'
 
 
 def model(case='uniform'):
-    return {'faults': [int(m.bit_count() <= (2 if case == 'impossible' else 1)) if case != 'core' else int(m & ~1 == 0) for m in range(16)], 'outages': [int(m.bit_count() <= 1) for m in range(16)], 'anchors': [[0], [1]]}
+    return {'faults': [int(m.bit_count() <= 1) if case != 'core' else int(m & ~1 == 0) for m in range(16)], 'outages': [int(m.bit_count() <= (2 if case == 'impossible' else 1)) for m in range(16)], 'anchors': [[0], [1]]}
 
 
 def record(case):

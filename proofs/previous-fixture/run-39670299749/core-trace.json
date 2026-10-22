@@ -1,0 +1,2560 @@
+[
+  {
+    "label": "core-compile",
+    "caller": 3,
+    "method": "compile",
+    "args": [],
+    "transaction": "0x4b7412fef21dd4b4e02d69385d9a2c1bf1e57b0f2c26d23ce1115039f4d7b031",
+    "state_before": {
+      "assessment": null,
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [],
+        "status": "UNCOMPILED",
+        "threshold": 0,
+        "weights": [],
+        "witness": []
+      },
+      "proposals": [],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [],
+      "value": ""
+    }
+  },
+  {
+    "label": "core-propose-first",
+    "caller": 0,
+    "method": "propose",
+    "args": [
+      "core-release-a"
+    ],
+    "transaction": "0x1dce20ac736a072053fc7cb78ce32584ff5530235edb7dc6ce9f5d684b251367",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "core-zero-weight-aspen",
+    "caller": 0,
+    "method": "endorse",
+    "args": [
+      0
+    ],
+    "transaction": "0xe6e0088516255bb0ad72c7836fa53bfac9c8ea429acaecd9d258d75af983a8ac",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 1,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "core-endorse-birch",
+    "caller": 1,
+    "method": "endorse",
+    "args": [
+      0
+    ],
+    "transaction": "0x0728aecdb378f25319e870ab250ea39c0ac5a43522c5a0683fec077cf8348c45",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 1,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 3,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "core-reject-one-trusted",
+    "caller": 3,
+    "method": "execute",
+    "args": [
+      0
+    ],
+    "error": "[EXPECTED] Quorum not met",
+    "transaction": "0xdf88b80401ec311308283da1d24695598b37eb99c56e6e421b2dff4e54146eac",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 3,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 3,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "core-endorse-cedar",
+    "caller": 2,
+    "method": "endorse",
+    "args": [
+      0
+    ],
+    "transaction": "0xe6dd7a41ceccf42230933eceba99a27cda2c6429ccfaa5caba7eed939132f9a9",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 3,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "core-execute-first",
+    "caller": 0,
+    "method": "execute",
+    "args": [
+      0
+    ],
+    "transaction": "0x8d5ed5b8d813bcc90fbe67e4ea5665cb6aeed835b9b5e19445b5d6aa58e83c86",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": "core-release-a"
+    }
+  },
+  {
+    "label": "core-propose-next",
+    "caller": 3,
+    "method": "propose",
+    "args": [
+      "core-release-b"
+    ],
+    "transaction": "0x406ec00f61281ec9b0540d7445d4e4f8e243374024b6aea44aaf6f7d2e4911a7",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "value": "core-release-a"
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 1,
+          "proposer": 3,
+          "value": "core-release-b"
+        }
+      ],
+      "value": "core-release-a"
+    }
+  },
+  {
+    "label": "core-next-birch",
+    "caller": 1,
+    "method": "endorse",
+    "args": [
+      1
+    ],
+    "transaction": "0x142d5bbdb3a77d8c01d82279e852cbd395566cd91e4e0551290deeb659ea3af2",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 1,
+          "proposer": 3,
+          "value": "core-release-b"
+        }
+      ],
+      "value": "core-release-a"
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        },
+        {
+          "endorsements": 2,
+          "nonce": 1,
+          "proposer": 3,
+          "value": "core-release-b"
+        }
+      ],
+      "value": "core-release-a"
+    }
+  },
+  {
+    "label": "core-next-dogwood",
+    "caller": 3,
+    "method": "endorse",
+    "args": [
+      1
+    ],
+    "transaction": "0xc1cd1f69bef0804aad9662d8ee7f0e28d659dd686e561d8461fb6970ece7a09e",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        },
+        {
+          "endorsements": 2,
+          "nonce": 1,
+          "proposer": 3,
+          "value": "core-release-b"
+        }
+      ],
+      "value": "core-release-a"
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        },
+        {
+          "endorsements": 10,
+          "nonce": 1,
+          "proposer": 3,
+          "value": "core-release-b"
+        }
+      ],
+      "value": "core-release-a"
+    }
+  },
+  {
+    "label": "core-execute-next",
+    "caller": 2,
+    "method": "execute",
+    "args": [
+      1
+    ],
+    "transaction": "0xb01c38f84bd16e5ec415214677aaade090937fc7f841a29a7369b44b6bf1012b",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "core-release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        },
+        {
+          "endorsements": 10,
+          "nonce": 1,
+          "proposer": 3,
+          "value": "core-release-b"
+        }
+      ],
+      "value": "core-release-a"
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+            "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+            "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+        "signers": [
+          "0x72b9d2c8045898fa072cd316245cbf7486db70d3",
+          "0xe23251c1e7f0a78da51b911f17c11bd83f69b07c",
+          "0xffad047d3eb4869dc576c3a6112a42ec3adcadaf",
+          "0x9bc398fa66605f7a05d68099d84bb391c7ff93dc"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/9a56ecbf708ffb7e0d20e6daf18058b7259085b7/fixtures/core.json"
+      },
+      "history": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "core-release-a"
+        },
+        {
+          "endorsements": 10,
+          "nonce": 1,
+          "proposal_id": 1,
+          "value": "core-release-b"
+        }
+      ],
+      "nonce": 2,
+      "policy": {
+        "quorums": [
+          6,
+          10,
+          12
+        ],
+        "status": "ACTIVE",
+        "threshold": 2,
+        "weights": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 7,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "core-release-a"
+        },
+        {
+          "endorsements": 10,
+          "nonce": 1,
+          "proposer": 3,
+          "value": "core-release-b"
+        }
+      ],
+      "value": "core-release-b"
+    }
+  }
+]
