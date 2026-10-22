@@ -1,8 +1,9 @@
 // Read-only receipt diagnostics. No signing or network calls.
 const fs=require('node:fs'),path=require('node:path'),{pathToFileURL}=require('node:url');
+const {createRequire}=require('node:module');
 async function main(){
  const cli=process.env.GENLAYER_CLI_PATH;if(!cli)throw Error('Set GENLAYER_CLI_PATH');
- const {abi}=await import(pathToFileURL(path.resolve(path.dirname(cli),'../node_modules/genlayer-js/dist/index.js')).href);
+ const {abi}=await import(pathToFileURL(createRequire(cli).resolve('genlayer-js')).href);
  const receipt=JSON.parse(fs.readFileSync(process.argv[2],'utf8'));
  function plain(x){
   if(typeof x==='bigint'){const n=Number(x);if(!Number.isSafeInteger(n))throw Error('Unsafe integer');return n;}

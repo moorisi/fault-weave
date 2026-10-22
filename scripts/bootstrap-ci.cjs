@@ -1,7 +1,8 @@
 // Encrypted disposable CLI accounts; no private key export.
 const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto'),os=require('node:os');
 if(!process.env.GITHUB_ACTIONS||!process.env.GITHUB_ENV)throw Error('Disposable CI runner only');
-const cli=path.join(cp.execFileSync('npm',['root','-g'],{encoding:'utf8'}).trim(),'genlayer/dist/index.js');
+const cli=path.resolve(__dirname,'../node_modules/genlayer/dist/index.js');
+if(!fs.existsSync(cli))throw Error('Run npm ci before preparing proof accounts');
 const password=crypto.randomBytes(24).toString('hex');console.log('::add-mask::'+password);
 const accounts=[];
 for(let i=0;i<4;i++){

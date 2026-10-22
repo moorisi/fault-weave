@@ -30,7 +30,7 @@ jobs:
       - name: Install pinned tooling
         run: |
           pip install -r requirements-dev.txt
-          npm install --global genlayer@0.39.2
+          npm ci --no-audit --no-fund
           genvm-lint download --version v0.2.16
       - name: Lint and test consensus, authorization and quorum-family properties
         run: |

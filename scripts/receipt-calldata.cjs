@@ -1,9 +1,10 @@
 const path=require('node:path'),{pathToFileURL}=require('node:url');
+const {createRequire}=require('node:module');
 let sdk;
 async function decodeReceipt(receipt){
  if(!sdk){
   if(!process.env.GENLAYER_CLI_PATH)throw Error('GENLAYER_CLI_PATH required for pinned CLI calldata decoder');
-  const base=path.resolve(path.dirname(process.env.GENLAYER_CLI_PATH),'../node_modules/genlayer-js/dist');
+  const base=path.dirname(createRequire(process.env.GENLAYER_CLI_PATH).resolve('genlayer-js'));
   const [{abi},{CalldataAddress}]=await Promise.all([import(pathToFileURL(path.join(base,'index.js')).href),import(pathToFileURL(path.join(base,'types/index.js')).href)]);
   sdk={abi,CalldataAddress};
  }
