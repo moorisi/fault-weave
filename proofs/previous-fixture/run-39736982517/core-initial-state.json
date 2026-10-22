@@ -1,0 +1,32 @@
+{
+  "assessment": null,
+  "configuration": {
+    "labels": [
+      "Aspen",
+      "Birch",
+      "Cedar",
+      "Dogwood"
+    ],
+    "register": "release-register",
+    "repository": "moorisi/fault-weave",
+    "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+    "signers": [
+      "0x824af9f5fef6fc8ba42c449d7aaad70b1ba305c6",
+      "0x544f243b366bc599a9b759caf92f823146b4bfaa",
+      "0x221ca052786db57dd511ff840cd9d92274d4d7cb",
+      "0x2a94cc7032e9f6db4662232b60acc1f0877ff969"
+    ],
+    "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/core.json"
+  },
+  "history": [],
+  "nonce": 0,
+  "policy": {
+    "quorums": [],
+    "status": "UNCOMPILED",
+    "threshold": 0,
+    "weights": [],
+    "witness": []
+  },
+  "proposals": [],
+  "value": ""
+}

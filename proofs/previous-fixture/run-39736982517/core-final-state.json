@@ -1,0 +1,128 @@
+{
+  "assessment": {
+    "model": {
+      "anchors": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "faults": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outages": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "source": {
+      "clauses": [
+        "FINAL malicious-signing assumption for release-register: Aspen alone may be Byzantine, or nobody may be Byzantine. Birch, Cedar and Dogwood are explicitly trusted not to sign maliciously. Every set containing any of those three as Byzantine is excluded.",
+        "FINAL unavailability assumption for release-register: any single signer may be unable or unwilling to sign, including each trusted signer. No two signers may be unavailable simultaneously. Zero unavailability is permitted. Trust against malicious signing does not imply continuous availability.",
+        "The proposed policy trusting Aspen instead of Dogwood was rejected. It has no effect. The clauses above are the complete final assumptions for this register."
+      ],
+      "register": "release-register",
+      "signers": [
+        "Aspen",
+        "Birch",
+        "Cedar",
+        "Dogwood"
+      ]
+    }
+  },
+  "configuration": {
+    "labels": [
+      "Aspen",
+      "Birch",
+      "Cedar",
+      "Dogwood"
+    ],
+    "register": "release-register",
+    "repository": "moorisi/fault-weave",
+    "sha256": "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad",
+    "signers": [
+      "0x824af9f5fef6fc8ba42c449d7aaad70b1ba305c6",
+      "0x544f243b366bc599a9b759caf92f823146b4bfaa",
+      "0x221ca052786db57dd511ff840cd9d92274d4d7cb",
+      "0x2a94cc7032e9f6db4662232b60acc1f0877ff969"
+    ],
+    "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/core.json"
+  },
+  "history": [
+    {
+      "endorsements": 7,
+      "nonce": 0,
+      "proposal_id": 0,
+      "value": "core-release-a"
+    },
+    {
+      "endorsements": 10,
+      "nonce": 1,
+      "proposal_id": 1,
+      "value": "core-release-b"
+    }
+  ],
+  "nonce": 2,
+  "policy": {
+    "quorums": [
+      6,
+      10,
+      12
+    ],
+    "status": "ACTIVE",
+    "threshold": 2,
+    "weights": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "witness": []
+  },
+  "proposals": [
+    {
+      "endorsements": 7,
+      "nonce": 0,
+      "proposer": 0,
+      "value": "core-release-a"
+    },
+    {
+      "endorsements": 10,
+      "nonce": 1,
+      "proposer": 3,
+      "value": "core-release-b"
+    }
+  ],
+  "value": "core-release-b"
+}
