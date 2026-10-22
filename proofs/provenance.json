@@ -1,0 +1,28 @@
+{
+  "repository": "moorisi/fault-weave",
+  "network": "studionet",
+  "chain_id": 61999,
+  "runs": [
+    {
+      "scenario": "uniform",
+      "workflow_run": "39743639059",
+      "url": "https://github.com/moorisi/fault-weave/actions/runs/39743639059",
+      "source_sha256": "cca508f1d818d6dc3d0a4af73aba1424919ceba5892e397a4919f546d6f0566f",
+      "fixture_revision": "b64e2aee58c4c1f0ba45317f7b55100bdc915d82"
+    },
+    {
+      "scenario": "core",
+      "workflow_run": "39743644896",
+      "url": "https://github.com/moorisi/fault-weave/actions/runs/39743644896",
+      "source_sha256": "cca508f1d818d6dc3d0a4af73aba1424919ceba5892e397a4919f546d6f0566f",
+      "fixture_revision": "b64e2aee58c4c1f0ba45317f7b55100bdc915d82"
+    },
+    {
+      "scenario": "impossible",
+      "workflow_run": "39743657988",
+      "url": "https://github.com/moorisi/fault-weave/actions/runs/39743657988",
+      "source_sha256": "cca508f1d818d6dc3d0a4af73aba1424919ceba5892e397a4919f546d6f0566f",
+      "fixture_revision": "b64e2aee58c4c1f0ba45317f7b55100bdc915d82"
+    }
+  ]
+}

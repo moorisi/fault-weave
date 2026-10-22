@@ -1,0 +1,97 @@
+{
+  "assessment": {
+    "model": {
+      "anchors": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "faults": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "outages": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "source": {
+      "clauses": [
+        "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood may be Byzantine at a time. Every singleton and the empty set is permitted. Every simultaneous Byzantine pair or larger set is excluded.",
+        "FINAL unavailability assumption for release-register: any simultaneous set of at most two signers may be unavailable, including every pair, every singleton and none. This is the total nonresponder budget, including malicious withholding and benign outages. Three or four unavailable signers simultaneously are excluded.",
+        "No named signer is exempt from these final bounds. A narrower pilot that trusted Birch and Cedar has ended and must not be used."
+      ],
+      "register": "release-register",
+      "signers": [
+        "Aspen",
+        "Birch",
+        "Cedar",
+        "Dogwood"
+      ]
+    }
+  },
+  "configuration": {
+    "labels": [
+      "Aspen",
+      "Birch",
+      "Cedar",
+      "Dogwood"
+    ],
+    "register": "release-register",
+    "repository": "moorisi/fault-weave",
+    "sha256": "818587717d85cdf5159a618764f067ef8ec7c3320872cd910c15ba0071bde48e",
+    "signers": [
+      "0xd6c1bad180328f598c37fddb9935d439d3ec2609",
+      "0x9704ccb6e0aefbe5d0e57333e100797ccb921bed",
+      "0x9fa9adee6a78c0e1bc72b3db8333db986e90c642",
+      "0xbed382665f3c33c26a3721c664e8e7f36637cfb1"
+    ],
+    "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/impossible.json"
+  },
+  "history": [],
+  "nonce": 0,
+  "policy": {
+    "quorums": [],
+    "status": "BLOCKED",
+    "threshold": 0,
+    "weights": [],
+    "witness": [
+      1,
+      6,
+      8
+    ]
+  },
+  "proposals": [],
+  "value": ""
+}

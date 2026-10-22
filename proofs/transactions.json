@@ -1,0 +1,33 @@
+{
+  "source_sha256": "cca508f1d818d6dc3d0a4af73aba1424919ceba5892e397a4919f546d6f0566f",
+  "hashes": {
+    "uniform-deployment": "0x3a7fecbc474aa24bd6acecf275a14cef5df76dee7d521d728dc1f19b30c827bf",
+    "uniform-compile": "0x5f7df15903a2d55e1de92a42e6eb4764dfe4d03ac072d09ec92a84fa692ae90f",
+    "uniform-propose-first": "0xb573e158100e01001d45be5ee27462d21bd0e9d0eac759ad126bb173eb3be806",
+    "uniform-propose-competing": "0x448a3a63c74cbc65041eb3ff8708ed102d9b4da13c115f8f92c88d8f28bb4c42",
+    "uniform-endorse-aspen": "0x517870789f278cfbeadf3dcaa36390fb4f714b1feb4bb54d6798672561c2008d",
+    "uniform-endorse-birch": "0xb45f4161e3ac26cf9ea82324cfe1cf665f2241ed1bd252fa8689dba33aefc96e",
+    "uniform-reject-two-signers": "0x4e985314a603b4eae0d3b2bbd10d0cb14d9d637cfb2ccdde7e2ed792c33580ef",
+    "uniform-revoke-birch": "0x01dac49bde40d78b5565cd68f91f6b69acce2cf699a367b37aaeb67426ddb127",
+    "uniform-endorse-cedar": "0x392c62edad18ff7a9a271801320a48bea58e04dac976740f3a84831008d6bd32",
+    "uniform-endorse-dogwood": "0x14f911ecba4c152cb298dbd2b69c2a6cda9698e90bceeef165d760fc8b63bcf6",
+    "uniform-execute-without-birch": "0x914a5bb30a52bc0aabe40ab013edfcd914a7d3d1fedd711f2665e1fecdd76346",
+    "uniform-reject-stale-competitor": "0x2f653884ccde112d078088ad1f659669bda2f03ee890e64595eadb989f4e8b72",
+    "core-deployment": "0x14c2f46f5612bee89fe37381e6472ed190ee4ea76f1cb9d1ce7db4910ca2dd2e",
+    "core-compile": "0x04df4c0b9d91d7b78908e48b31f2cda9fa2f000ec8e03990bd0e07debc8f11aa",
+    "core-propose-first": "0x10b7ee7b06818565610b729b93cc9d81cbf65eb0437739306b3a863ec3370f10",
+    "core-zero-weight-aspen": "0x839a6cb6e971a6be33dc00fb2fb7ef175112264f8ae459915d23a0e552d270c4",
+    "core-endorse-birch": "0xd1b2fb52e8e194f890a3ff1f8f1fdd53a7b11e9d0b868614df6664944f69ab37",
+    "core-reject-one-trusted": "0x650f85caf8176c0e6d56e981d832ef3812f084340e6acc618c91cb1b56193694",
+    "core-endorse-cedar": "0x2afc18d837ab8db660dee6ae723ab750cff006af490396cf16c7275cbf8a6708",
+    "core-execute-first": "0x556fd5f0d5a957e6d41a2a5a86677c57a2d4fcb37f965d248a290bdc4ba8c9e2",
+    "core-propose-next": "0x4ba4d80beda000c8a2a40d50a53f19ff81d9719de27eadc11f053663abe9d449",
+    "core-next-birch": "0x1170d13d08833f350ee93baf412adc7f06e4bb65f87753ebcef101efeb5f9544",
+    "core-next-dogwood": "0xf9472134e2c3f7498d5957ca0fa3c9c688a3ec83f5a32ff3fb5c18288f2bf1eb",
+    "core-execute-next": "0x6def8e00741783e0679ee1ac480eaed3326ef2aee343ae6af258efce58785c9a",
+    "impossible-deployment": "0xca91bfb06bda67a406ac6b0a141b43c930c731cfb952497cc9509b31a020b7ca",
+    "impossible-compile": "0x6ee1de0500f44cac11710ce2966e9dc3910b9aa8ecd9734d88310ef8a782a3aa",
+    "impossible-reject-proposal": "0xe73080e6eda4d4a8ae57074a817a7900c0b13c835d9064450d435d5b400f217d",
+    "impossible-reject-execution": "0x4972a8e047f811f992241e186874ab82c154007eee6be3ca37537fd9ddc96f04"
+  }
+}

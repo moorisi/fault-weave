@@ -1,0 +1,101 @@
+[
+  {
+    "id": "uniform",
+    "args": [
+      "moorisi/fault-weave",
+      "release-register",
+      [
+        "Aspen",
+        "Birch",
+        "Cedar",
+        "Dogwood"
+      ],
+      [
+        "0x991048f842931645b05589c9ff7b841fbce1292c",
+        "0xd92365297e2fa623858b191926ed21556f12dffe",
+        "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+        "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+      ],
+      "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json",
+      "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e"
+    ],
+    "contract": "0x8E1410DC607D538e382063Ab3D9e1189c469d311",
+    "deployment": "0x3a7fecbc474aa24bd6acecf275a14cef5df76dee7d521d728dc1f19b30c827bf",
+    "accounts": [
+      "0x991048f842931645b05589c9ff7b841fbce1292c",
+      "0xd92365297e2fa623858b191926ed21556f12dffe",
+      "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+      "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+    ],
+    "fixture_revision": "b64e2aee58c4c1f0ba45317f7b55100bdc915d82",
+    "source_sha256": "cca508f1d818d6dc3d0a4af73aba1424919ceba5892e397a4919f546d6f0566f",
+    "network": "studionet",
+    "chain_id": 61999
+  },
+  {
+    "id": "core",
+    "args": [
+      "moorisi/fault-weave",
+      "release-register",
+      [
+        "Aspen",
+        "Birch",
+        "Cedar",
+        "Dogwood"
+      ],
+      [
+        "0x6f8cef00242a45e69f6701752402ed2b250ce1bb",
+        "0x311ee74848d2c3c60113055cd372bb2483019815",
+        "0x9b12f37ce557116b8b28b907de7e28c49b9aa693",
+        "0x39bf6f31001613758eec42326d17837ab9e72410"
+      ],
+      "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/core.json",
+      "7d39c849bc0082cfee4cb137966fa3c6c503300f0893e0f39e02074065d118ad"
+    ],
+    "contract": "0x55810Fb6e71582bB5b5a4F04145231c508FA15eC",
+    "deployment": "0x14c2f46f5612bee89fe37381e6472ed190ee4ea76f1cb9d1ce7db4910ca2dd2e",
+    "accounts": [
+      "0x6f8cef00242a45e69f6701752402ed2b250ce1bb",
+      "0x311ee74848d2c3c60113055cd372bb2483019815",
+      "0x9b12f37ce557116b8b28b907de7e28c49b9aa693",
+      "0x39bf6f31001613758eec42326d17837ab9e72410"
+    ],
+    "fixture_revision": "b64e2aee58c4c1f0ba45317f7b55100bdc915d82",
+    "source_sha256": "cca508f1d818d6dc3d0a4af73aba1424919ceba5892e397a4919f546d6f0566f",
+    "network": "studionet",
+    "chain_id": 61999
+  },
+  {
+    "id": "impossible",
+    "args": [
+      "moorisi/fault-weave",
+      "release-register",
+      [
+        "Aspen",
+        "Birch",
+        "Cedar",
+        "Dogwood"
+      ],
+      [
+        "0xd6c1bad180328f598c37fddb9935d439d3ec2609",
+        "0x9704ccb6e0aefbe5d0e57333e100797ccb921bed",
+        "0x9fa9adee6a78c0e1bc72b3db8333db986e90c642",
+        "0xbed382665f3c33c26a3721c664e8e7f36637cfb1"
+      ],
+      "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/impossible.json",
+      "818587717d85cdf5159a618764f067ef8ec7c3320872cd910c15ba0071bde48e"
+    ],
+    "contract": "0x777C793083Ef9d14499DE09DC298DaB46dEeecc9",
+    "deployment": "0xca91bfb06bda67a406ac6b0a141b43c930c731cfb952497cc9509b31a020b7ca",
+    "accounts": [
+      "0xd6c1bad180328f598c37fddb9935d439d3ec2609",
+      "0x9704ccb6e0aefbe5d0e57333e100797ccb921bed",
+      "0x9fa9adee6a78c0e1bc72b3db8333db986e90c642",
+      "0xbed382665f3c33c26a3721c664e8e7f36637cfb1"
+    ],
+    "fixture_revision": "b64e2aee58c4c1f0ba45317f7b55100bdc915d82",
+    "source_sha256": "cca508f1d818d6dc3d0a4af73aba1424919ceba5892e397a4919f546d6f0566f",
+    "network": "studionet",
+    "chain_id": 61999
+  }
+]

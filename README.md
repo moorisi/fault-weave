@@ -59,6 +59,7 @@ immutable failed compilation. Synthetic fixtures illustrate the mechanism.
 
 ```sh
 pip install -r requirements-dev.txt
+npm ci --no-audit --no-fund
 genvm-lint download --version v0.2.16
 genvm-lint check contracts/fault_weave.py --json
 python -m pytest tests/direct -q
@@ -74,8 +75,17 @@ verify bounded read retries and refusal to replay signed sends.
 Manual GitHub `proofs.yml` runs create four encrypted disposable CLI wallets on
 an ephemeral runner and deploy through `genlayer@0.39.2` to gasless **StudioNet,
 chain 61999**. No key export, funding, native token or real asset is involved.
+The committed npm lock also pins genlayer-js 1.1.8 and viem 2.56.3.
 Each call must finalize with the expected execution result and pass full-state
 replay. [Proof methodology](proofs/README.md) · [Design](docs/design.md).
+
+Proof wallets are discarded with their runners. The published instances preserve
+scenario results; they are not an ongoing committee service. For continued use,
+deploy with your own persistent signer wallets and a reviewed policy source.
+
+Primary deployment: [contract explorer](https://explorer-studio.genlayer.com/address/0x8E1410DC607D538e382063Ab3D9e1189c469d311).
+All three scenarios have 28 verified finalized receipts, including five expected
+rejections. [Ready submission text](docs/submission.md) · [Complete proofs](proofs/README.md).
 
 ## Prior art and attribution
 

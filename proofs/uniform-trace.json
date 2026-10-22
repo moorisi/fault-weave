@@ -1,0 +1,2552 @@
+[
+  {
+    "label": "uniform-compile",
+    "caller": 3,
+    "method": "compile",
+    "args": [],
+    "transaction": "0x5f7df15903a2d55e1de92a42e6eb4764dfe4d03ac072d09ec92a84fa692ae90f",
+    "state_before": {
+      "assessment": null,
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [],
+        "status": "UNCOMPILED",
+        "threshold": 0,
+        "weights": [],
+        "witness": []
+      },
+      "proposals": [],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [],
+      "value": ""
+    }
+  },
+  {
+    "label": "uniform-propose-first",
+    "caller": 0,
+    "method": "propose",
+    "args": [
+      "release-a"
+    ],
+    "transaction": "0xb573e158100e01001d45be5ee27462d21bd0e9d0eac759ad126bb173eb3be806",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "uniform-propose-competing",
+    "caller": 1,
+    "method": "propose",
+    "args": [
+      "release-b"
+    ],
+    "transaction": "0x448a3a63c74cbc65041eb3ff8708ed102d9b4da13c115f8f92c88d8f28bb4c42",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "uniform-endorse-aspen",
+    "caller": 0,
+    "method": "endorse",
+    "args": [
+      0
+    ],
+    "transaction": "0x517870789f278cfbeadf3dcaa36390fb4f714b1feb4bb54d6798672561c2008d",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 1,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "uniform-endorse-birch",
+    "caller": 1,
+    "method": "endorse",
+    "args": [
+      0
+    ],
+    "transaction": "0xb45f4161e3ac26cf9ea82324cfe1cf665f2241ed1bd252fa8689dba33aefc96e",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 1,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 3,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "uniform-reject-two-signers",
+    "caller": 3,
+    "method": "execute",
+    "args": [
+      0
+    ],
+    "error": "[EXPECTED] Quorum not met",
+    "transaction": "0x4e985314a603b4eae0d3b2bbd10d0cb14d9d637cfb2ccdde7e2ed792c33580ef",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 3,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 3,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "uniform-revoke-birch",
+    "caller": 1,
+    "method": "revoke",
+    "args": [
+      0
+    ],
+    "transaction": "0x01dac49bde40d78b5565cd68f91f6b69acce2cf699a367b37aaeb67426ddb127",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 3,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 1,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "uniform-endorse-cedar",
+    "caller": 2,
+    "method": "endorse",
+    "args": [
+      0
+    ],
+    "transaction": "0x392c62edad18ff7a9a271801320a48bea58e04dac976740f3a84831008d6bd32",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 1,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 5,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "uniform-endorse-dogwood",
+    "caller": 3,
+    "method": "endorse",
+    "args": [
+      0
+    ],
+    "transaction": "0x14f911ecba4c152cb298dbd2b69c2a6cda9698e90bceeef165d760fc8b63bcf6",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 5,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 13,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    }
+  },
+  {
+    "label": "uniform-execute-without-birch",
+    "caller": 1,
+    "method": "execute",
+    "args": [
+      0
+    ],
+    "transaction": "0x914a5bb30a52bc0aabe40ab013edfcd914a7d3d1fedd711f2665e1fecdd76346",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [],
+      "nonce": 0,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 13,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": ""
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [
+        {
+          "endorsements": 13,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 13,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": "release-a"
+    }
+  },
+  {
+    "label": "uniform-reject-stale-competitor",
+    "caller": 0,
+    "method": "execute",
+    "args": [
+      1
+    ],
+    "error": "[EXPECTED] Stale proposal",
+    "transaction": "0x2f653884ccde112d078088ad1f659669bda2f03ee890e64595eadb989f4e8b72",
+    "state_before": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [
+        {
+          "endorsements": 13,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 13,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": "release-a"
+    },
+    "state": {
+      "assessment": {
+        "model": {
+          "anchors": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "faults": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "outages": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "source": {
+          "clauses": [
+            "FINAL malicious-signing assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be Byzantine at a time. Any one named signer may be that one. No pair or larger simultaneous Byzantine set is permitted.",
+            "FINAL unavailability assumption for release-register: at most one of Aspen, Birch, Cedar and Dogwood can be unavailable at a time. Every individual outage is permitted, as is no outage. Simultaneous outages of two or more signers are excluded.",
+            "A superseded training draft allowed two malicious signers and simultaneous regional outages. That draft is withdrawn and does not describe this register."
+          ],
+          "register": "release-register",
+          "signers": [
+            "Aspen",
+            "Birch",
+            "Cedar",
+            "Dogwood"
+          ]
+        }
+      },
+      "configuration": {
+        "labels": [
+          "Aspen",
+          "Birch",
+          "Cedar",
+          "Dogwood"
+        ],
+        "register": "release-register",
+        "repository": "moorisi/fault-weave",
+        "sha256": "65cc6d8e437c4e19292ab6998064effa8ac62c89c596ab26524080365369b25e",
+        "signers": [
+          "0x991048f842931645b05589c9ff7b841fbce1292c",
+          "0xd92365297e2fa623858b191926ed21556f12dffe",
+          "0xe385cb9183d0f1382feb48bf8beb28d7a808bccc",
+          "0x6c8cde961e2bdf3ff86851c178c2cc1e83e58505"
+        ],
+        "url": "https://raw.githubusercontent.com/moorisi/fault-weave/b64e2aee58c4c1f0ba45317f7b55100bdc915d82/fixtures/uniform.json"
+      },
+      "history": [
+        {
+          "endorsements": 13,
+          "nonce": 0,
+          "proposal_id": 0,
+          "value": "release-a"
+        }
+      ],
+      "nonce": 1,
+      "policy": {
+        "quorums": [
+          7,
+          11,
+          13,
+          14
+        ],
+        "status": "ACTIVE",
+        "threshold": 3,
+        "weights": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "witness": []
+      },
+      "proposals": [
+        {
+          "endorsements": 13,
+          "nonce": 0,
+          "proposer": 0,
+          "value": "release-a"
+        },
+        {
+          "endorsements": 0,
+          "nonce": 0,
+          "proposer": 1,
+          "value": "release-b"
+        }
+      ],
+      "value": "release-a"
+    }
+  }
+]
