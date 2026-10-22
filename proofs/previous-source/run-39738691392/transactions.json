@@ -1,0 +1,17 @@
+{
+  "source_sha256": "88018838edbc30044f6ed04a7002654f5411e45fd5d265d4b756a817ada9748f",
+  "hashes": {
+    "core-deployment": "0xe1ba47d7a59b7e1e94c72ccecdf9c1c5c846e60a38c075a1eb086e59cd757785",
+    "core-compile": "0xbd9aeadf92f5f54d328df3ded4239e5afcae0cef8720ef6c434d4efbc54ea28d",
+    "core-propose-first": "0xdda7f3779238f239a7cf9f994dfb20ddc1b19da37bc6b4606aa028879c958dfb",
+    "core-zero-weight-aspen": "0x26a91b3fc479f5b37719e723f6044f226772e9fc3681f8fc189bb2ba2f8b9683",
+    "core-endorse-birch": "0xed25c70b36d8c60841d29f2f1a5046ec9ef9555fc771f82c7f9c50ac867d746a",
+    "core-reject-one-trusted": "0x2a9c0b5d1171d3d3d70c346cd920eefc9c48c65652117fddba80b7bdcd6946de",
+    "core-endorse-cedar": "0x24e00b8f7a1c4043780901a58dd0ee81d055dc878261c3d20bd8c3ccd48e380b",
+    "core-execute-first": "0x372bcaf036f9b03b88929d90dd1663274be4dad4137d7ba86ed7c67952e3a079",
+    "core-propose-next": "0x5988afab5a9bc38f1d4c5dd4ea7e426494105b6df0d121a557c3de8cc8980dda",
+    "core-next-birch": "0x9a69cbd70a38b7ea05109572c56f8a5368fa8fe27a7f738d283cc2ce654c5ead",
+    "core-next-dogwood": "0xe5a87f1ce0b04624b3a25f1bba2b5d6a43950f8642bb6e11e48becda65f5e192",
+    "core-execute-next": "0x0ed743c854b3a97c123463198b3b589000c66ab321221067596e127be5cceb51"
+  }
+}

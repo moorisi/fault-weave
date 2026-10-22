@@ -35,7 +35,18 @@ def mocks(vm, case='uniform', answer=None, audit=None, body=None, status=200):
     vm.clear_mocks()
     url, _, raw = record(case)
     vm.mock_web(re.escape(url), {'status': status, 'body': raw if body is None else body})
-    vm.mock_llm(r'.*FAULTWEAVE-EXTRACT.*', json.dumps(model(case) if answer is None else answer))
+    answer = model(case) if answer is None else answer
+    source = json.loads(raw)
+    if functions()['valid_model'](answer, source):
+        named = {'anchors': answer['anchors']}
+        for key, field in [('faults', 'fault_sets'), ('outages', 'outage_sets')]:
+            if -1 in answer[key]: named[field] = 'UNRESOLVED'
+            else:
+                allowed = [m for m, v in enumerate(answer[key]) if v == 1]
+                maxima = [m for m in allowed if not any(m != other and m & other == m for other in allowed)]
+                named[field] = [[source['signers'][i] for i in range(4) if m & (1 << i)] for m in maxima]
+        answer = named
+    vm.mock_llm(r'.*FAULTWEAVE-EXTRACT.*', json.dumps(answer))
     vm.mock_llm(r'.*FAULTWEAVE-AUDIT.*', json.dumps({'faults_valid': True, 'outages_valid': True, 'anchors_valid': True} if audit is None else audit))
 
 
@@ -46,7 +57,7 @@ def activate(c, vm, case='uniform', **kwargs):
 
 
 def functions():
-    names = {'integer', 'minimal_sets', 'compile_quorum', 'valid_model'}
+    names = {'integer', 'minimal_sets', 'compile_quorum', 'valid_model', 'normalize_cohorts'}
     tree = ast.parse(SOURCE.read_text())
     ns = {'itertools': itertools}
     exec(compile(ast.Module(body=[x for x in tree.body if isinstance(x, ast.FunctionDef) and x.name in names], type_ignores=[]), str(SOURCE), 'exec'), ns)
@@ -323,3 +334,41 @@ def test_independent_all_winning_pair_oracle_matches_optimized_policy():
         rows.append([[int(m == 0 or m in fs) for m in range(16)], [int(m == 0 or m in os) for m in range(16)]])
     result = subprocess.run(['node', '-e', "const fs=require('node:fs'),{oracle}=require('./scripts/scenario.cjs');console.log(JSON.stringify(JSON.parse(fs.readFileSync(0,'utf8')).map(([f,o])=>oracle(f,o))));"], cwd=ROOT, input=json.dumps(rows), text=True, capture_output=True, check=True)
     assert [solve(f, o) for f, o in rows] == json.loads(result.stdout)
+
+
+@pytest.mark.parametrize('field,bad', [
+    ('fault_sets', None), ('fault_sets', []), ('fault_sets', [['Elsewhere']]),
+    ('fault_sets', [['Aspen', 'Aspen']]), ('fault_sets', [['Aspen'], ['Aspen']]),
+    ('fault_sets', [[True]]), ('fault_sets', 'UNKNOWN'), ('outage_sets', [1]),
+    ('outage_sets', [['Aspen']] * 17), ('anchors', [[], [1]]),
+    ('anchors', [[True], [1]]), ('anchors', [[0], [3]]),
+])
+def test_invalid_named_cohorts_fail_closed(direct_deploy, direct_vm, direct_accounts, field, bad):
+    c = deploy(direct_deploy, direct_vm, direct_accounts)
+    answer = {'fault_sets': [[n] for n in ['Aspen', 'Birch', 'Cedar', 'Dogwood']], 'outage_sets': [[n] for n in ['Aspen', 'Birch', 'Cedar', 'Dogwood']], 'anchors': [[0], [1]]}
+    answer[field] = bad; mocks(direct_vm, answer=answer); before = c.get_state()
+    with direct_vm.expect_revert('Invalid complete failure model'): c.compile()
+    assert c.get_state() == before
+
+
+def test_named_pair_cohorts_never_admit_triples(direct_deploy, direct_vm, direct_accounts):
+    labels = ['Aspen', 'Birch', 'Cedar', 'Dogwood']
+    answer = {'fault_sets': [[n] for n in reversed(labels)], 'outage_sets': [list(reversed(pair)) for pair in itertools.combinations(labels, 2)] + [['Aspen'], []], 'anchors': [[0], [1]]}
+    c = deploy(direct_deploy, direct_vm, direct_accounts, 'impossible')
+    activate(c, direct_vm, 'impossible', answer=answer)
+    s = c.get_state()
+    assert s['assessment']['model']['outages'] == model('impossible')['outages']
+    assert all(s['assessment']['model']['outages'][m] == 0 for m in [7, 11, 13, 14, 15])
+    assert s['policy']['status'] == 'BLOCKED'
+
+
+def test_named_expansion_covers_all_four_signer_downward_closed_families():
+    normalize = functions()['normalize_cohorts']; labels = ['Aspen', 'Birch', 'Cedar', 'Dogwood']
+    source = {'signers': labels, 'clauses': ['fault policy', 'outage policy']}
+    families = closed_families(4); assert len(families) == 167
+    for family in families:
+        allowed = [m for m, v in enumerate(family) if v]
+        maxima = [m for m in allowed if not any(other != m and m & other == m for other in allowed)]
+        cohorts = [[labels[i] for i in range(4) if m & (1 << i)] for m in reversed(maxima)]
+        result = normalize({'fault_sets': cohorts, 'outage_sets': cohorts, 'anchors': [[0], [1]]}, source)
+        assert result['faults'] == result['outages'] == family

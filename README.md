@@ -9,10 +9,11 @@ service certificates, confidence scores, price auctions or owner overrides.
 
 The deployer fixes 2–4 signer wallets, labels, a register scope, and an immutable
 source URL/SHA-256. Anyone calls `compile()`. The leader and validators each fetch
-the full source, check its bytes and scope, and interpret **every subset** of the
-roster separately for malicious signing and unavailability. The two complete
-vectors contain `1` permitted, `0` excluded, or `-1` unresolved. Validators compare
-both vectors exactly and audit every decision and source anchor against all clauses.
+the full source, check its bytes and scope, and independently extract maximal
+**named failure cohorts** for malicious signing and unavailability. Contract code
+expands these into every roster subset: `1` permitted, `0` excluded, `-1` unresolved.
+Models never generate numeric bit tables. Validators compare both complete vectors
+exactly and audit a named-subset table and source anchors against all clauses.
 There is no numerical confidence tolerance. A hash alone never substitutes for text.
 
 The deterministic compiler checks:
@@ -64,9 +65,10 @@ python -m pytest tests/direct -q
 node --test tests/rpc-preflight.test.cjs
 ```
 
-The suite includes 64 direct tests, 361 exhaustive pairs of three-signer failure
+The suite includes 78 direct tests, 361 exhaustive pairs of three-signer failure
 families checked against all quorum families, 96 generated four-signer models,
-and 27 full comparisons with the independent optimizer. Seven transport tests
+167 exhaustive four-signer named-cohort expansions, and 27 full comparisons with
+the independent optimizer. Seven transport tests
 verify bounded read retries and refusal to replay signed sends.
 
 Manual GitHub `proofs.yml` runs create four encrypted disposable CLI wallets on

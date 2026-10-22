@@ -1,0 +1,93 @@
+{
+  "hash": "0x91dab51983127f0d3148ba61d51dac661d10a6abd6f95a56bdb121d74898b7c3",
+  "result": "MAJORITY_DISAGREE",
+  "leaders": [
+    {
+      "index": 0,
+      "execution": "SUCCESS",
+      "outputs": [
+        {
+          "call": "0",
+          "tag": 0,
+          "model": {
+            "anchors": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "faults": [
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "outages": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "execution": "SUCCESS",
+      "outputs": []
+    }
+  ],
+  "validators": [
+    {
+      "vote": "disagree",
+      "nondet_disagree": 0,
+      "stdout": "FAULTWEAVE exact model mismatch: {\"independent\": {\"anchors\": [[0], [1]], \"faults\": [1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], \"outages\": [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0]}, \"leader\": {\"anchors\": [[0], [1]], \"faults\": [1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], \"outages\": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]}}\n",
+      "stderr": ""
+    },
+    {
+      "vote": "idle",
+      "nondet_disagree": null,
+      "stdout": "",
+      "stderr": "Validator execution cancelled after quorum"
+    },
+    {
+      "vote": "disagree",
+      "nondet_disagree": 0,
+      "stdout": "FAULTWEAVE exact model mismatch: {\"independent\": {\"anchors\": [[0], [1]], \"faults\": [1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], \"outages\": [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0]}, \"leader\": {\"anchors\": [[0], [1]], \"faults\": [1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0], \"outages\": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]}}\n",
+      "stderr": ""
+    },
+    {
+      "vote": "idle",
+      "nondet_disagree": null,
+      "stdout": "",
+      "stderr": "Validator execution cancelled after quorum"
+    }
+  ]
+}

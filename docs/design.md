@@ -10,12 +10,18 @@ errors are transient; permanent source/schema mismatches fail without activation
 Input prose is untrusted data, never prompt instructions. Scope, corrections,
 negation, exclusions, superseded drafts and correlations affect the vectors.
 
-For each bitmask of the immutable roster, the model must decide whether that exact
-simultaneous Byzantine set is permitted, forbidden or unresolved, and separately
-do the same for outages. Both families must be downward closed for known permitted
-sets; empty set is permitted. Unknown is integer -1, never a missing/null entry.
+The model extracts complete maximal permitted cohorts using signer names, separately
+for Byzantine behavior and outages. It does not perform numeric bit-table arithmetic.
+Deterministic code expands the cohorts into every roster subset. Every subset of a
+permitted cohort is permitted; all other subsets are excluded. A clear no-failure
+family is `[[]]`; an empty family is invalid. An unresolved family uses the literal
+`UNRESOLVED` and expands to -1 for every nonempty set, with the empty set still 1.
+Missing/null entries never become zero. Reordering and redundant contained cohorts
+do not change the result; duplicate cohorts, duplicate members and unknown labels
+are invalid. Both expanded families are necessarily downward closed.
 One bounded repair may correct malformed schema; unresolved facts cannot be guessed.
-Validators re-fetch, re-interpret, compare both vectors and audit every entry.
+Validators re-fetch, independently extract cohorts, compare both expanded vectors
+and audit every entry in a deterministically constructed table of named subsets.
 Equivalent supporting anchors need not have identical wording/indices, but every
 anchor list is scoped and independently audited. Deterministic compilation consumes
 only the exactly agreed vectors. LLM schema errors are never consensus-approved
